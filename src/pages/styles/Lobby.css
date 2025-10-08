@@ -1,0 +1,47 @@
+.lobby-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lobbyCode {
+    color: white;
+}
+.lobby-details {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+}
+
+.lobby-host, .lobby-guest {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.leave-btn {
+    color: red;
+}
+.start-game, .leave-btn {
+    width: 30rem;
+    height: 6rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 32px;
+    border-radius: 20px;
+    border: none;
+    margin: 3rem;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 20px 30px -6px #000000;
+}
+.start-game:hover, .leave-btn:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+

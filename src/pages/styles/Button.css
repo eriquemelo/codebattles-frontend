@@ -1,0 +1,23 @@
+.btn-span, a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none; 
+}
+.button-option {
+    width: 30rem;
+    height: 6rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 32px;
+    border-radius: 20px;
+    border: none;
+    margin: 3rem;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 20px 30px -6px #000000;
+}
+.button-option:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+
