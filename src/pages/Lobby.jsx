@@ -67,7 +67,7 @@ function Lobby() {
         try {
            const req = await fetch(`http://localhost:3000/lobby/start`, {
                 method: "POST",
-                body: JSON.stringify({ username, lobbyCode }),
+                body: JSON.stringify({ lobbyCode }),
                 headers: {
                     "Content-Type": "application/json"
                 }
