@@ -1,7 +1,6 @@
 import { useLocation, useNavigate, useParams } from "react-router-dom"
-import "./styles/Lobby.css"
 import { useEffect, useState } from "react"
-import Button from "./components/Button"
+import Button from "../../components/Button"
 function Lobby() {
     const { lobbyCode } = useParams()
     const navigate = useNavigate()
@@ -33,7 +32,9 @@ function Lobby() {
         });
         const res = await req.json();
         if (res.started) {
-            navigate(`/game/${lobbyCode}`)
+            navigate(`/game/${lobbyCode}`, {
+                        state: { username }
+          })
         }
         setHostUser(res.host_username)
         setSecondUser(res.second_player_username ? res.second_player_username : "Waiting...")
@@ -45,7 +46,7 @@ function Lobby() {
        };
 
     fetchLobby();
-    const interval = setInterval(fetchLobby, 2000);
+    const interval = setInterval(fetchLobby, 500);
     return () => clearInterval(interval);
   }, []);
     const leave = async () => {

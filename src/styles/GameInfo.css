@@ -1,0 +1,33 @@
+.GameInfoContainer {
+    color: #fff;
+}
+
+.title_container {
+    text-align: center;
+}
+.GameInfoRulesContainer {
+    display: flex;
+}
+.GameFlowContainer {
+   margin-right: 3rem; 
+}
+.ListItem {
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+}
+.GameJudgingContainer {
+    width: -webkit-fill-available;
+    margin-right: 3rem;
+}
+.judgingTitle {
+    text-decoration: underline;
+    text-align: center;
+}
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+button {
+    color: #000;
+
+}

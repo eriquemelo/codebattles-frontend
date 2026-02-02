@@ -1,0 +1,16 @@
+
+.logo-container {
+    display: flex; 
+    justify-content: center; 
+    padding-right: 72px;
+}
+.logo-container-game {
+    display: flex;
+    justify-content: space-around; 
+}
+.challenger {
+    width: 193px;
+    height: 149px;
+    border-radius: 22px;
+}
+

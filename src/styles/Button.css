@@ -20,4 +20,6 @@
     box-shadow: none;
 }
 
-
+.disabled {
+    background-color: #bfbdbb;
+}

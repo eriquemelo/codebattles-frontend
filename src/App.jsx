@@ -1,22 +1,40 @@
-import './App.css'
-import CreateLobby from "./pages/CreateLobby"
-import JoinLobby from "./pages/JoinLobby"
-import Game from './pages/Game'
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import CreateLobby from "./pages/lobby/CreateLobby"
+import JoinLobby from "./pages/lobby/JoinLobby"
+import "./styles/index.css"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from './pages/Home'
-import Logo from './pages/components/Logo'
-import Lobby from './pages/Lobby'
+import Logo from './components/Logo'
+import Lobby from './pages/lobby/Lobby'
+import Login from './pages/account/Login'
+import ProtectedRoute from './components/ProtectedRoute'
+import Game from './pages/Game/Game'
 function App() {
     return (
         <BrowserRouter className="app"> 
             <Routes>
                 <Route element={<Logo />}>
                     <Route path="/" element={<Home />} />
-                    <Route path="/create-lobby" element={<CreateLobby />} />
-                    <Route path="/join-lobby" element={<JoinLobby />} />
-                    <Route path="/lobby/:lobbyCode" element={<Lobby />} />
-                    <Route path="/game/:lobbyCode" element={<Game />} />
-                </Route>
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/create-lobby" element={
+                        <ProtectedRoute>
+                            <CreateLobby />
+                        </ProtectedRoute>
+                    }/>
+                    <Route path="/join-lobby" element={
+                        <ProtectedRoute>
+                            <JoinLobby />
+                        </ProtectedRoute>
+                    } />
+                    <Route path="/lobby/:lobbyCode" element={
+                        <ProtectedRoute>
+                            <Lobby />
+                        </ProtectedRoute>
+                    } />
+               </Route>
+            
+            <Route>
+                  <Route path="/game/:lobbyCode" element={<ProtectedRoute><Game /></ProtectedRoute>} />
+              </Route>
             </Routes>
         </BrowserRouter>
     )

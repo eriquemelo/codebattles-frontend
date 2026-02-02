@@ -1,0 +1,16 @@
+.solver-title, .solver-moreinfo {
+    text-align: center;
+    color: white;
+}
+.solver-span {
+    color: #00FF1E
+}
+.solver-awaiting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loading {
+    margin-top: 96px;
+    margin-bottom: 96px
+}

@@ -1,5 +1,4 @@
-import Button from "./components/Button";
-import "./styles/CreateLobby.css"
+import Button from "../../components/Button";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 function CreateLobby() {

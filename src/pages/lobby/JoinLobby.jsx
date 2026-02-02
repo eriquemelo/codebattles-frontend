@@ -1,5 +1,4 @@
-import Button from "./components/Button";
-import "./styles/JoinLobby.css"
+import Button from "../../components/Button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 function JoinLobby() {
@@ -36,7 +35,7 @@ function JoinLobby() {
         e.preventDefault()
         if (!disabled) {
             try {
-                const req = await fetch ("http://localhost:3000/lobby/join", {
+                const req = await fetch("http://localhost:3000/lobby/join", {
                     method: "POST", 
                     body: JSON.stringify({ username, lobbyCode }),
                     headers: {
@@ -48,6 +47,9 @@ function JoinLobby() {
                     return;
                 } else if (req.status == 403) {
                     alert("Lobby is full")
+                    return;
+                } else if (req.status == 409) {
+                    alert("That username has already been taken by another player in the lobby!")
                     return;
                 }
                 const res = await req.json();

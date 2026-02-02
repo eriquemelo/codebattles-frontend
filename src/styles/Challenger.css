@@ -1,0 +1,20 @@
+.txt-white {
+    color: white;
+    text-align: center;
+}
+.field {
+    background: transparent;
+    border: 1px solid #ccc; 
+    border-radius: 6px;  
+    padding: 10px;
+    color: #fff;           
+    font-size: 16px;
+    outline: none;
+    margin: 10px;
+}
+.creation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

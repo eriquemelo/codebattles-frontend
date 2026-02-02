@@ -1,0 +1,17 @@
+
+@import "./index.css";
+@import "./Button.css";
+@import "./logo.css";
+@import "./Home.css";
+@import "./login.css";
+@import "./CreateLobby.css";
+@import "./JoinLobby.css";
+@import "./Lobby.css";
+@import "./GameInfo.css";
+@import "./Challenger.css";
+@import "./Solver.css";
+
+html {
+    background-color: #1E1E1E;
+    font-family: "Inter"
+}

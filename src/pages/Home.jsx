@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
-import "./styles/Home.css"
-import  Button  from "./components/Button"
+import Button from "../components/Button"
 function Home() {
     return (
         <div className="home-container">
