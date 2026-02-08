@@ -10,7 +10,8 @@
 @import "./GameInfo.css";
 @import "./Challenger.css";
 @import "./Solver.css";
-
+@import "./solving.css";
+@import "./Evaluation.css";
 html {
     background-color: #1E1E1E;
     font-family: "Inter"
