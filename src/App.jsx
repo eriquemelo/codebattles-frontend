@@ -8,6 +8,7 @@ import Lobby from './pages/lobby/Lobby'
 import Login from './pages/account/Login'
 import ProtectedRoute from './components/ProtectedRoute'
 import Game from './pages/Game/Game'
+import Challenges from "./pages/account/Challenges"
 function App() {
     return (
         <BrowserRouter className="app"> 
@@ -28,6 +29,11 @@ function App() {
                     <Route path="/lobby/:lobbyCode" element={
                         <ProtectedRoute>
                             <Lobby />
+                        </ProtectedRoute>
+                    } />
+                    <Route path="/challenges" element={
+                        <ProtectedRoute>
+                            <Challenges />
                         </ProtectedRoute>
                     } />
                </Route>

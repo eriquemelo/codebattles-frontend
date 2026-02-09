@@ -16,6 +16,7 @@ function Game() {
     const username = state.username
     const userToken = Cookies.get("authToken")
     const userID = jwtDecode(userToken).userID 
+    console.log(userID)
     const socketRef = useRef(null) 
     const [phase, setPhase] = useState("info")
     const [role, setRole] = useState(null)

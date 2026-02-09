@@ -6,6 +6,7 @@ function Home() {
             <div className="lobby-options">
                 <Link to="/create-lobby"><Button text="Create a Lobby"/></Link>
                 <Link to="/join-lobby"><Button text="Join a Lobby"/></Link>
+                <Link to="/challenges"><Button text="View Challenges" /></Link>
             </div>
         </div>
     )
